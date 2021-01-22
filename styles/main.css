@@ -14,25 +14,38 @@ body {
 }
 
 .header {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 3em;
 }
 
 .header-list li {
   padding-left: 2em;
 }
+
 .header-list :first-child {
   padding: 0;
 }
 
 .flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .float-right-margin {
@@ -66,7 +79,7 @@ body {
   right: 4.5em;
   top: 20em;
   /*    top:50%;
-  transform: translate(50%, 50%);*/
+    transform: translate(50%, 50%);*/
 }
 
 .floating-section-indicator-el {
@@ -75,6 +88,7 @@ body {
   padding-right: 1.25em;
   text-align: right;
 }
+
 .floating-section-indicator-el:after {
   content: "";
   position: absolute;
@@ -102,7 +116,6 @@ body {
 .main-header {
   width: 60em;
   margin: auto;
-  animation: left-in 2s 1 ease-in forwards 1s;
 }
 
 .title-header-before {
@@ -117,20 +130,30 @@ body {
   margin-top: 0.3em;
   margin-bottom: 0.5em;
 }
+
 .title-header-2 p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
 }
 
 .floating-contact-us {
-  align-self: center;
-  align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .floating-contact-us :first-child {
   margin-top: 3.2em;
   margin-bottom: 3em;
   margin-left: 1em;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
+
 .floating-contact-us img {
   width: 1.5em;
   height: 1.5em;
@@ -141,9 +164,10 @@ body {
 .account-avatar {
   height: 1.5em;
   width: 1.5em;
-  align-self: flex-start;
-  margin-top: -0.25em;
-  margin-right: 0.4em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: -.25em;
+  margin-right: .4em;
 }
 
 .home-cover-image {
@@ -155,7 +179,21 @@ body {
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: brightness(50%);
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+@-webkit-keyframes left-in {
+  from {
+    position: absolute;
+    left: 0;
+  }
+  to {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
+    position: absolute;
+  }
 }
 
 @keyframes left-in {
@@ -165,9 +203,9 @@ body {
   }
   to {
     left: 50%;
-    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
     position: absolute;
   }
 }
-
 /*# sourceMappingURL=main.css.map */

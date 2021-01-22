@@ -89,7 +89,7 @@ body {
 .main-header {
     width: 60em;
     margin: auto;
-    animation: left-in 2s 1 ease-in forwards 1s;
+ //   animation: left-in 2s 1 ease-in forwards 1s;
 
 }
 
@@ -140,6 +140,7 @@ margin-right: .4em;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
+    
     filter:brightness(50%);
 }
 @keyframes left-in {
