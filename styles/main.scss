@@ -45,8 +45,7 @@ body {
     font-weight: 600;
 }
 .text-medium {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 4rem;
 }
 .text-large {
     font-size: 5.5rem;
@@ -85,11 +84,14 @@ body {
 }
 .first-section {
     margin-top: 13em;
+    height: 43em;
+
 }
 .main-header {
     width: 60em;
-    margin: auto;
- //   animation: left-in 2s 1 ease-in forwards 1s;
+    margin-left: auto;
+    margin-right: auto;
+    //   animation: left-in 2s 1 ease-in forwards 1s;
 
 }
 
@@ -108,7 +110,6 @@ body {
     }
 }
 .floating-contact-us {
-    align-self: center;
     align-items: center;
     :first-child {
         margin-top: 3.2em;
@@ -137,7 +138,7 @@ margin-right: .4em;
     z-index: -1;
     background-image: url("../assets/bg.jpg");
     width: 100vw;
-    height: 100vh;
+    height: 72em;
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -154,4 +155,44 @@ margin-right: .4em;
         transform: translate(-50%,0%);
         position: absolute;
     }
+}
+
+.get-started {
+    position: relative;
+    height: 40em;
+    padding-left: 23em;
+    padding-right: 19em;
+    justify-content: space-around;
+    background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.001) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 100%);
+
+    //look up how to avoid writing gets-tarted every  time
+&:after {
+content:"01";
+position: absolute;
+right:5em;
+top:0;
+font-size: 15em;
+font-size: bold;
+color:grey;
+opacity: .1 ;
+z-index: 10;
+}
+}
+
+.get-started__text-block {
+    margin-top: 8em;
+    margin-right: 8em;
+}
+.get-started__read-more {
+    margin-top: 1em;
+    color: #fcd885;
+}
+.para-spacing {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+}
+
+.line-height {
+    line-height: 1.7em;
 }
