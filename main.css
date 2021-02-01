@@ -1,0 +1,172 @@
+body {
+  font-family: Roboto;
+  font-size: 16px;
+  color: white;
+}
+
+.header-font {
+  font-family: "Merriweather", serif;
+}
+
+.container {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.header {
+  justify-content: center;
+  margin: 3em;
+}
+
+.header-list li {
+  padding-left: 2em;
+}
+.header-list :first-child {
+  padding: 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.float-right-margin {
+  margin-left: auto;
+}
+
+.float-left-margin {
+  margin-right: auto;
+}
+
+.text-logo {
+  font-size: 2.2em;
+}
+
+.text-small {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.text-medium {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.text-large {
+  font-size: 5.5rem;
+}
+
+.floating-section-indicator {
+  position: fixed;
+  right: 4.5em;
+  top: 20em;
+  /*    top:50%;
+  transform: translate(50%, 50%);*/
+}
+
+.floating-section-indicator-el {
+  position: relative;
+  padding-bottom: 2.5em;
+  padding-right: 1.25em;
+  text-align: right;
+}
+.floating-section-indicator-el:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -1em;
+  background-color: rgba(255, 255, 255, 0.35);
+  height: 3.5em;
+  width: 4px;
+}
+
+.active-indiactor:after {
+  background-color: white;
+}
+
+.title-header-1 {
+  color: #fcd885;
+  letter-spacing: 0.4em;
+  position: relative;
+}
+
+.first-section {
+  margin-top: 13em;
+}
+
+.main-header {
+  width: 60em;
+  margin: auto;
+}
+
+.title-header-before {
+  margin-right: 2em;
+  margin-top: 0.3em;
+  width: 3.5em;
+  height: 3px;
+  background-color: #fcd885;
+}
+
+.title-header-2 {
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+.title-header-2 p {
+  width: max-content;
+}
+
+.floating-contact-us {
+  align-self: center;
+  align-items: center;
+}
+.floating-contact-us :first-child {
+  margin-top: 3.2em;
+  margin-bottom: 3em;
+  margin-left: 1em;
+  transform: rotate(90deg);
+}
+.floating-contact-us img {
+  width: 1.5em;
+  height: 1.5em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.account-avatar {
+  height: 1.5em;
+  width: 1.5em;
+  align-self: flex-start;
+  margin-top: -0.25em;
+  margin-right: 0.4em;
+}
+
+.home-cover-image {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-image: url("../assets/bg.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(50%);
+}
+
+@keyframes left-in {
+  from {
+    position: absolute;
+    left: 0;
+  }
+  to {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    position: absolute;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
