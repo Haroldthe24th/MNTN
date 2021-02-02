@@ -2,6 +2,7 @@ body {
   font-family: Roboto;
   font-size: 16px;
   color: white;
+  overflow-x: hidden;
 }
 
 .header-font {
@@ -77,6 +78,7 @@ body {
   position: fixed;
   right: 4.5em;
   top: 20em;
+  z-index: 1;
   /*    top:50%;
     transform: translate(50%, 50%);*/
 }
@@ -111,7 +113,7 @@ body {
 
 .first-section {
   margin-top: 13em;
-  height: 43em;
+  height: 49em;
 }
 
 .main-header {
@@ -175,7 +177,7 @@ body {
   z-index: -1;
   background-image: url("../assets/bg.jpg");
   width: 100vw;
-  height: 72em;
+  height: 80.5em;
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: brightness(50%);
@@ -224,7 +226,7 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background: #0b1d27;
-  padding-bottom: 10em;
+  padding-bottom: 14em;
 }
 
 .faded-background-start {
@@ -243,11 +245,11 @@ body {
   left: 1em;
   top: 0;
   font-size: 15em;
-  font-size: bold;
   color: grey;
   opacity: 0.3;
   z-index: 10;
   font-family: "Tajawal", sans-serif;
+  font-weight: 700;
 }
 
 .get-started__text-block-2 {
@@ -261,11 +263,11 @@ body {
   right: 3.08em;
   top: 0;
   font-size: 15em;
-  font-size: bold;
   color: grey;
   opacity: 0.3;
   z-index: 10;
   font-family: "Tajawal", sans-serif;
+  font-weight: 700;
 }
 
 .get-started__text-block-3 {
@@ -279,11 +281,11 @@ body {
   left: 1em;
   top: 0;
   font-size: 15em;
-  font-size: bold;
   color: grey;
   opacity: 0.3;
   z-index: 10;
   font-family: "Tajawal", sans-serif;
+  font-weight: 700;
 }
 
 .get-started__read-more {
@@ -312,5 +314,54 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.footer {
+  position: relative;
+  background: #0b1d27;
+  height: 20em;
+}
+
+.footer__left {
+  padding-left: 10em;
+  width: 63.5%;
+}
+
+.footer__left p {
+  margin-bottom: 1em;
+}
+
+.footer__right {
+  width: 36.5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 16.5em;
+}
+
+.copyright {
+  opacity: .5;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-left: 1em;
+  position: absolute;
+  bottom: 2.7em;
+  left: 11em;
+}
+
+.footer__right-list {
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+}
+
+.footer__right-list :first-child {
+  font-size: 1.5em;
+  color: #fcd885;
+}
+
+.footer__right-list li {
+  padding-bottom: 1.5em;
+  font-size: 1.1em;
 }
 /*# sourceMappingURL=main.css.map */
