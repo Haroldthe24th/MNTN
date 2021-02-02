@@ -11,30 +11,35 @@ const home = document.querySelector("#home");
 const secOne = document.querySelector("#sec-1");
 const secTwo = document.querySelector("#sec-2");
 const secThree = document.querySelector("#sec-3");
-
+function toggleActiveIndicator(index){
+    if (!secIndi.children[index].classList.contains("active-indiactor")) {
+        Array.from(secIndi.children).forEach((el) => { el.classList.remove("active-indiactor") })
+        secIndi.children[index].classList.add("active-indiactor");
+    }
+    return;
+}
 document.addEventListener("scroll", (e) => {
     if (checkIntersec(secIndi, home)) {
         if (!secIndi.children[0].classList.contains("active-indiactor")) {
-            Array.from(secIndi.children).forEach((el) => { el.classList.remove("active-indiactor") })
-            secIndi.children[0].classList.add("active-indiactor");
+            toggleActiveIndicator(0)
         }
     }
     if (checkIntersec(secIndi, secOne)) {
         if (!secIndi.children[1].classList.contains("active-indiactor")) {
-            Array.from(secIndi.children).forEach((el) => { el.classList.remove("active-indiactor") })
-            secIndi.children[1].classList.add("active-indiactor");
+            toggleActiveIndicator(1);
+
         }
     }
     if (checkIntersec(secIndi, secTwo)) {
         if (!secIndi.children[2].classList.contains("active-indiactor")) {
-            Array.from(secIndi.children).forEach((el) => { el.classList.remove("active-indiactor") })
-            secIndi.children[2].classList.add("active-indiactor");
+            toggleActiveIndicator(2);
+
         }
     }
     if (checkIntersec(secIndi, secThree)) {
         if (!secIndi.children[3].classList.contains("active-indiactor")) {
-            Array.from(secIndi.children).forEach((el,index) => { el.classList.remove("active-indiactor") })
-            secIndi.children[3].classList.add("active-indiactor");
+            toggleActiveIndicator(3);
+
         }
     }
 })

@@ -141,6 +141,19 @@ body {
   width: max-content;
 }
 
+.title-header-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title-header-3 img {
+  margin-left: .5em;
+}
+
 .floating-contact-us {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -340,7 +353,7 @@ body {
 }
 
 .copyright {
-  opacity: .5;
+  opacity: 0.5;
   font-family: "Tajawal", sans-serif;
   font-weight: 500;
   font-size: 1.1em;
