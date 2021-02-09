@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+  }
 body {
     font-family: Roboto;
     font-size: 16px;
@@ -63,6 +66,10 @@ body {
     position: relative;
     padding-bottom: 2.5em;
     padding-right: 1.25em;
+    a{
+    color: white;
+    text-decoration: none;
+}
     text-align: right;
 
     &:after {
@@ -164,7 +171,7 @@ body {
     }
 }
 
-.get-started-spacing-1 {
+.get-started-spacing-1 { 
     padding-left: 23em;
     padding-right: 19em;
 }
