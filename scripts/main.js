@@ -1,9 +1,15 @@
-var body = document.body;
-body.style.display = "none";
+var mainContetn = document.querySelector("#main-content");
+var loader = document.querySelector("#loader")
 
 window.addEventListener("load", () => {
-    console.log("body.style.display ",body.style.display )
-    body.style.display = "block";
+    console.log("body.style.display ", mainContetn.style.display)
+    //wait at least 500ms
+    mainContetn.style.display = "block";
+    loader.style.display = "none";
+    setTimeout(() => {
+        //  mainContetn.style.display = "block";
+        // loader.style.display = "none";
+    }, 500)
     function checkIntersec(div1, div2) {
         const div1Cords = div1.getBoundingClientRect();
         const div2Cords = div2.getBoundingClientRect();

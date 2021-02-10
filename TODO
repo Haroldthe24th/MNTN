@@ -2,5 +2,5 @@
 -make responsive
 -mobile optimizations(image size... )
 -improve code
--preload everything and show loading status while loading everything
+-fix loader to not showup when page cached or not flash when it is
 -fix issue with first link in floaters not taking uall the way up
