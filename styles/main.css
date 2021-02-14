@@ -232,14 +232,6 @@ body {
   }
 }
 
-/*.get-started-spacing-1 {
-    padding-left: 23em;
-    padding-right: 19em;
-}
-.get-started-spacing-2 {
-    padding-right: 16em;
-    padding-left: 19em;
-}*/
 .get-started-spacing-1 {
   padding-left: 15.5%;
   padding-right: 15%;
@@ -273,8 +265,8 @@ body {
 .get-started__text-block-1:after {
   content: "01";
   position: absolute;
-  left: -.5em;
-  top: -.40em;
+  left: -0.5em;
+  top: -0.4em;
   font-size: 15em;
   color: grey;
   opacity: 0.3;
@@ -293,7 +285,7 @@ body {
   content: "02";
   position: absolute;
   right: 75%;
-  top: -.40em;
+  top: -0.4em;
   font-size: 15em;
   color: grey;
   opacity: 0.3;
@@ -311,8 +303,8 @@ body {
 .get-started__text-block-3:after {
   content: "03";
   position: absolute;
-  left: -.5em;
-  top: -.40em;
+  left: -0.5em;
+  top: -0.4em;
   font-size: 15em;
   color: grey;
   opacity: 0.3;
@@ -405,13 +397,9 @@ body {
 
 .loader {
   border: 0.2em solid transparent;
-  /* Light grey */
   border-top: 0.2em solid #fcd885;
-  /* Blue */
   border-left: 0.2em solid #fcd885;
-  /* Blue */
   border-right: 0.2em solid #fcd885;
-  /* Blue */
   border-radius: 50%;
   width: 5em;
   height: 5em;
@@ -459,5 +447,49 @@ body {
 .get-started__image {
   width: 50%;
   height: auto;
+}
+
+/* laptop sizes, small monitors(18"), notebooks */
+@media only screen and (max-width: 1366px) {
+  /* HOME*/
+  .first-section {
+    height: 40em;
+  }
+  .main-header {
+    width: auto;
+  }
+  .title-header-2 {
+    font-size: 4.5em;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  /* sections 1,2,3*/
+  .get-started {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 60em;
+  }
+  .get-started__image {
+    margin: auto;
+    margin-top: 5em;
+  }
+  .get-started__text-block-2 {
+    margin-left: 0;
+  }
+  .get-started__text-block-2:after {
+    content: "02";
+    position: absolute;
+    left: -0.5em;
+    top: -0.4em;
+    font-size: 15em;
+    color: grey;
+    opacity: 0.3;
+    z-index: 10;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 700;
+  }
 }
 /*# sourceMappingURL=main.css.map */

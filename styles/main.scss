@@ -1,3 +1,5 @@
+@import "./variables";
+@import "./mixins";
 html {
     scroll-behavior: smooth;
 }
@@ -89,7 +91,7 @@ body {
     }
 }
 .title-header-1 {
-    color: #fcd885;
+    color: $main-color;
     letter-spacing: 0.4em;
     position: relative;
 }
@@ -101,7 +103,7 @@ body {
     width: 60em;
     margin-left: auto;
     margin-right: auto;
-    //   animation: left-in 2s 1 ease-in forwards 1s;
+    //   animation: left-in 2s 1 ease-i n forwards 1s;
 }
 
 .title-header-before {
@@ -109,7 +111,7 @@ body {
     margin-top: 0.3em;
     width: 3.5em;
     height: 3px;
-    background-color: #fcd885;
+    background-color: $main-color;
 }
 .title-header-2 {
     margin-top: 0.3em;
@@ -172,15 +174,6 @@ body {
     }
 }
 
-/*.get-started-spacing-1 {
-    padding-left: 23em;
-    padding-right: 19em;
-}
-.get-started-spacing-2 {
-    padding-right: 16em;
-    padding-left: 19em;
-}*/
-
 .get-started-spacing-1 {
     padding-left: 15.5%;
     padding-right: 15%;
@@ -194,30 +187,19 @@ body {
     height: 40em;
 
     justify-content: space-around;
-    background: rgba(11, 29, 39, 1);
+    background: $main-background;
     padding-bottom: 14em;
     //look up how to avoid writing gets-tarted every  time
 }
 .faded-background-start {
-    background: linear-gradient(180deg, rgba(11, 29, 39, 0.001) 0%, rgba(11, 29, 39, 1) 25%, rgba(11, 29, 39, 1) 100%);
+    background: linear-gradient(180deg, rgba(11, 29, 39, 0.001) 0%, $main-background 25%, $main-background 100%);
 }
 .get-started__text-block-1 {
     margin-top: 8em;
     margin-right: 10%;
     position: relative;
 
-    &:after {
-        content: "01";
-        position: absolute;
-        left: -.5em;
-        top: -.40em;
-        font-size: 15em;
-        color: grey;
-        opacity: 0.3;
-        z-index: 10;
-        font-family: "Tajawal", sans-serif;
-        font-weight: 700;
-    }
+    @include after-section-header-count("01");
 }
 
 .get-started__text-block-2 {
@@ -227,13 +209,13 @@ body {
     &:after {
         content: "02";
         position: absolute;
-        right:75%;
-        top: -.40em;
+        right: 75%;
+        top: -0.4em;
         font-size: 15em;
         color: grey;
         opacity: 0.3;
         z-index: 10;
-        font-family: "Tajawal", sans-serif;
+        font-family: $main-font;
         font-weight: 700;
     }
 }
@@ -241,22 +223,11 @@ body {
     margin-top: 8em;
     margin-right: 10%;
     position: relative;
-    &:after {
-        content: "03";
-        position: absolute;
-        left: -.5em;
-        top: -.40em;
-        font-size: 15em;
-        color: grey;
-        opacity: 0.3;
-        z-index: 10;
-        font-family: "Tajawal", sans-serif;
-        font-weight: 700;
-    }
+    @include after-section-header-count("03");
 }
 .get-started__read-more {
     margin-top: 2em;
-    color: #fcd885;
+    color: $main-color;
     img {
         margin-left: 1em;
     }
@@ -275,7 +246,7 @@ body {
 }
 .footer {
     position: relative;
-    background: rgba(11, 29, 39, 1);
+    background: $main-background;
     height: 20em;
 }
 .footer__left {
@@ -287,12 +258,12 @@ body {
 .footer__right {
     justify-content: space-between;
     width: 35%;
-    margin-right:14%;
+    margin-right: 14%;
 }
 
 .copyright {
     opacity: 0.5;
-    font-family: "Tajawal", sans-serif;
+    font-family: $main-font;
     font-weight: 500;
     font-size: 1.1em;
     margin-left: 1em;
@@ -301,25 +272,25 @@ body {
     left: 11em;
 }
 .footer__right-list {
-    font-family: "Tajawal", sans-serif;
+    font-family: $main-font;
     font-weight: 500;
     :first-child {
         font-size: 1.5em;
-        color: #fcd885;
+        color: $main-color;
     }
     li {
         padding-bottom: 1.5em;
         font-size: 1.1em;
     }
 }
-.footer__content  {
+.footer__content {
     justify-content: space-between;
 }
 .loader {
-    border: 0.2em solid transparent; /* Light grey */
-    border-top: 0.2em solid #fcd885; /* Blue */
-    border-left: 0.2em solid #fcd885; /* Blue */
-    border-right: 0.2em solid #fcd885; /* Blue */
+    border: 0.2em solid transparent;
+    border-top: 0.2em solid $main-color;
+    border-left: 0.2em solid $main-color;
+    border-right: 0.2em solid $main-color;
     border-radius: 50%;
     width: 5em;
     height: 5em;
@@ -348,8 +319,32 @@ body {
 }
 .get-started__image {
     width: 50%;
-    height:auto;
+    height: auto;
 }
-@media only screen and (max-width: 1600px) {
-    .get-started {}
-  }
+/* laptop sizes, small monitors(18"), notebooks */
+@media only screen and (max-width: 1366px) {
+    /* HOME*/
+    .first-section {
+        height: 40em;
+    }
+    .main-header {
+        width:auto;
+    }
+    .title-header-2 {
+        font-size: 4.5em;
+        width: max-content;
+    }
+    /* sections 1,2,3*/
+    .get-started {
+        flex-direction: column;
+        height: 60em;
+    }
+    .get-started__image {
+        margin: auto;
+        margin-top: 5em;
+    }
+    .get-started__text-block-2 {
+        margin-left: 0;
+        @include after-section-header-count("02");
+    }
+}

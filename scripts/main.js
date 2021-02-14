@@ -65,6 +65,7 @@ window.addEventListener("load", () => {
     var bottomLeftSpinning = {
         duration: 3, x: -1000, y: -1000, scale: 0, rotation: 4000
     }
+    var fadeIn = { opacity: 0, duration: .5 }
     gsap.from(".main-header", { opacity: 0, duration: 1, y: -50 });
     gsap.from(".floating-contact-us", { opacity: 0, duration: 1, x: -10 });
     //section 1 animations
@@ -78,10 +79,12 @@ window.addEventListener("load", () => {
 
         }
     });
+
     tl1.from("#sec-1-h1", leftIn);
     tl1.from("#sec-1-h2", leftIn);
     tl1.from("#sec-1-h3", bottomIn);
     tl1.from("#sec-1-h4", bottomIn);
+    tl1.from("#sec-1-img", fadeIn);
     //--------------------
     //section 2 animations
     var tl2 = gsap.timeline({
@@ -98,6 +101,7 @@ window.addEventListener("load", () => {
     tl2.from("#sec-2-h2", leftIn);
     tl2.from("#sec-2-h3", bottomIn);
     tl2.from("#sec-2-h4", bottomIn);
+    
     //section 3 animations
     var tl3 = gsap.timeline({
         scrollTrigger: {
