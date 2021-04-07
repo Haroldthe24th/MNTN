@@ -84,7 +84,6 @@ window.addEventListener("load", () => {
     tl1.from("#sec-1-h2", leftIn);
     tl1.from("#sec-1-h3", bottomIn);
     tl1.from("#sec-1-h4", bottomIn);
-    tl1.from("#sec-1-img", fadeIn);
     //--------------------
     //section 2 animations
     var tl2 = gsap.timeline({

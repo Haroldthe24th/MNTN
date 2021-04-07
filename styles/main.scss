@@ -327,6 +327,20 @@ body {
     body {
         font-size: 18px;
     }
+    /* FONT SIZES*/
+    .text-small{
+        font-size: .8em;
+    }
+    .text-large {
+        font-size: 3.5em;
+    }
+    .text-logo {
+        font-size: 1.5em;
+    }
+    .text-medium {
+        font-size: 3.5rem;
+
+    }
     /* HOME*/
     .first-section {
         height: 40em;
@@ -335,7 +349,6 @@ body {
         width: auto;
     }
     .title-header-2 {
-        font-size: 4.5em;
         width: max-content;
     }
     /* sections 1,2,3*/
@@ -344,6 +357,7 @@ body {
         height: 60em;
         margin-top: -1px;
         margin-bottom: -1px;
+        padding-bottom: 5em;
     }
     .get-started__image {
         margin: auto;
@@ -359,6 +373,13 @@ body {
     .get-started__text-block-3 {
         margin-right: 0;
     }
+    .footer__left {
+        padding-left: 5em;
+        p {
+            margin-bottom: 1em;
+        }
+    }
+    
 }
 /*tablets */
 @media only screen and (max-width: 1024px) {
