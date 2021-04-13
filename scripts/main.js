@@ -2,15 +2,12 @@ var mainContetn = document.querySelector("#main-content");
 var loader = document.querySelector("#loader")
 
 window.addEventListener("load", () => {
-    console.log("body.style.display ", mainContetn.style.display)
-    //wait at least 500ms
+    //toggle loader
     mainContetn.style.display = "block";
     loader.style.display = "none";
-    setTimeout(() => {
-        //  mainContetn.style.display = "block";
-        // loader.style.display = "none";
-    }, 500)
+    //floating section indicator
     function checkIntersec(div1, div2) {
+    
         const div1Cords = div1.getBoundingClientRect();
         const div2Cords = div2.getBoundingClientRect();
         if (div1Cords.top > div2Cords.top) {
@@ -55,17 +52,14 @@ window.addEventListener("load", () => {
         }
     })
 
-
+    /*GASP ANIMATIONS */
     var leftIn = {
         opacity: 0, duration: 0.3, x: -100
     }
     var bottomIn = {
         opacity: 0, duration: 0.3, y: 50
     }
-    var bottomLeftSpinning = {
-        duration: 3, x: -1000, y: -1000, scale: 0, rotation: 4000
-    }
-    var fadeIn = { opacity: 0, duration: .5 }
+
     gsap.from(".main-header", { opacity: 0, duration: 1, y: -50 });
     gsap.from(".floating-contact-us", { opacity: 0, duration: 1, x: -10 });
     //section 1 animations
@@ -100,7 +94,7 @@ window.addEventListener("load", () => {
     tl2.from("#sec-2-h2", leftIn);
     tl2.from("#sec-2-h3", bottomIn);
     tl2.from("#sec-2-h4", bottomIn);
-    
+
     //section 3 animations
     var tl3 = gsap.timeline({
         scrollTrigger: {
