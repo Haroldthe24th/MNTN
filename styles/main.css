@@ -457,7 +457,7 @@ body {
   }
   /* FONT SIZES*/
   .text-small {
-    font-size: .8em;
+    font-size: 0.8em;
   }
   .text-large {
     font-size: 3.5em;
@@ -534,8 +534,13 @@ body {
   body {
     font-size: 19px;
   }
+  .first-section {
+    height: 20em;
+  }
   .footer {
-    height: 25em;
+    padding-top: 10em;
+    padding-left: 5em;
+    padding-right: 5em;
   }
   .footer__left {
     padding-left: 0;
@@ -546,11 +551,21 @@ body {
   }
   .copyright {
     bottom: 1.7em;
-    left: 16em;
+    left: 5em;
   }
   /*1,2,3 sections*/
   .get-started__image {
     width: 70%;
+  }
+  .text-large {
+    font-size: 2.5em;
+  }
+}
+
+/********/
+@media only screen and (max-width: 576px) {
+  .text-small {
+    font-size: 0.9em;
   }
 }
 /*# sourceMappingURL=main.css.map */
