@@ -156,7 +156,7 @@ body {
     z-index: -1;
     background-image: url("../assets/bg.jpg");
     // background-image: url("https://jooinn.com/images/nature-319.jpg");
-    width: 99vw;
+    width: 100vw;
     height: 80.5em;
     background-size: cover;
     background-repeat: no-repeat;
@@ -382,6 +382,7 @@ body {
 /*tablets */
 @media only screen and (max-width: 1024px) {
     /**/
+
     .floating-section-indicator {
         right: 2em;
     }
@@ -390,38 +391,97 @@ body {
         font-size: 19px;
     }
     .first-section {
-        height: 20em;
+     height: 50vw;
+   margin-top: 0;
+      margin-bottom: 10em;
     }
+ 
     .footer {
-        padding-top: 10em;
+        padding-top: 5em;
         padding-left: 5em;
         padding-right: 5em;
+        height: auto;
     }
     .footer__left {
-        padding-left: 0;
+        padding-left: 0; 
     }
     .footer__right {
         margin-right: 0;
         width: 57%;
     }
-    .copyright { 
+    .copyright {
         bottom: 1.7em;
         left: 5em;
     }
     /*1,2,3 sections*/
     .get-started__image {
-        width: 70%;
+        width: 55%;
+    }
+    .get-started {
+        height: 50em;
+    }
+.hide-tb-ph{
+    display: none;
+}
+    
+    .main-header {
+        margin-left: 3em; 
+        margin:1vw;
+    }
+    .container {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    //hide section indicator
+    .floating-section-indicator {
+        display: none;
+    }
+    .first-section{
+        flex-direction: column-reverse;
+    }
+    .floating-contact-us{
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        :first-child {
+            margin:0;
+            padding:0;
+            transform: rotate(0deg);
+        }
     }
     .text-large {
-        font-size: 2.5em;
+        font-size: 8vw;
     }
-   
-} 
+    .text-small {
+        font-size: 1em;
+        font-weight: normal;
+    }
+    .header {
+        margin-left:0;
+        margin-right: 0;
+    }
+   .footer__content {
+       flex-direction: column;
+   }
+   .footer__right {
+    flex-direction: column;
+
+   }
+   .copyright {
+       position: relative;
+   }
+
+}
 /********/
 // Small devices (landscape phones, 576px and down)
 @media only screen and (max-width: 576px) {
     .text-small {
-        font-size: 0.9em;
+        font-size: .75em;
+    }
+    .text-medium{
+        font-size:2em;
+    }
+    .get-started__image {
+        width: 90%;
     }
 }
-  

@@ -198,7 +198,7 @@ body {
   top: 0;
   z-index: -1;
   background-image: url("../assets/bg.jpg");
-  width: 99vw;
+  width: 100vw;
   height: 80.5em;
   background-size: cover;
   background-repeat: no-repeat;
@@ -535,12 +535,15 @@ body {
     font-size: 19px;
   }
   .first-section {
-    height: 20em;
+    height: 50vw;
+    margin-top: 0;
+    margin-bottom: 10em;
   }
   .footer {
-    padding-top: 10em;
+    padding-top: 5em;
     padding-left: 5em;
     padding-right: 5em;
+    height: auto;
   }
   .footer__left {
     padding-left: 0;
@@ -555,17 +558,85 @@ body {
   }
   /*1,2,3 sections*/
   .get-started__image {
-    width: 70%;
+    width: 55%;
+  }
+  .get-started {
+    height: 50em;
+  }
+  .hide-tb-ph {
+    display: none;
+  }
+  .main-header {
+    margin-left: 3em;
+    margin: 1vw;
+  }
+  .container {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .floating-section-indicator {
+    display: none;
+  }
+  .first-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .floating-contact-us {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .floating-contact-us :first-child {
+    margin: 0;
+    padding: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   .text-large {
-    font-size: 2.5em;
+    font-size: 8vw;
+  }
+  .text-small {
+    font-size: 1em;
+    font-weight: normal;
+  }
+  .header {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .footer__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .copyright {
+    position: relative;
   }
 }
 
 /********/
 @media only screen and (max-width: 576px) {
   .text-small {
-    font-size: 0.9em;
+    font-size: .75em;
+  }
+  .text-medium {
+    font-size: 2em;
+  }
+  .get-started__image {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=main.css.map */
