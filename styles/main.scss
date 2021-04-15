@@ -462,10 +462,14 @@ body {
     }
    .footer__content {
        flex-direction: column;
+       align-items: center;
    }
    .footer__right {
     flex-direction: column;
-
+text-align: center;
+   }
+   .footer__left{
+       text-align: center;
    }
    .copyright {
        position: relative;
